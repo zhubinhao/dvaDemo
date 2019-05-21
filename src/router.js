@@ -9,6 +9,7 @@ function RouterConfig({ history, app }) {
       <Switch>
         {RouteConfig.map((router,i)=>(
           <Route
+            key={router.path}
             path={router.path}
             component={dynamic({
               app,

@@ -4,7 +4,6 @@ export default {
 
     namespace: 'indexPage',
     state: {
-        text:"this is the home model",
         routes:[]
     },
   
@@ -14,12 +13,11 @@ export default {
     },
   
     effects: {
-        *getRouter({ payload }, { call,put }){
+        *getRouter(_, { put }){
             let routes=RouteConfig[0].routes
             yield put({ type: 'save' , payload:{routes:routes} });
         }
     },
-  //用来保存更新state值 上面的put方法调用这里的方法
     reducers: {
         save(state,  { payload }) {
             return { ...state, ...payload };

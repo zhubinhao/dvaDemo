@@ -1,0 +1,16 @@
+.menu{
+    height: 80px;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item{
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px;
+        &:hover{
+            color: blue
+        }
+    }
+}
