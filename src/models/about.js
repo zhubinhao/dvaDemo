@@ -13,7 +13,6 @@ export default {
     subscriptions: {
       setup({dispatch,history}){
           history.listen(({pathname}) => {
-            console.log(pathname)
           });
       },  
     },

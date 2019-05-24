@@ -6,6 +6,9 @@ import createHistory from 'history/createBrowserHistory';
 // const app = dva();
 const app = dva({
     history: createHistory(),
+    onError(err, dispatch) {
+      console.error(err);
+    },
 });
 if (!window.Promise) { 
   window.Promise = Promise;

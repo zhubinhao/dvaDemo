@@ -1,10 +1,19 @@
-.layout{
+.indexPage{
   .header{
     height: 48px;
     background: white;
   }
-  .content{
-    padding: 15px 50px;
-    background: white;
+  .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1200px;
+    margin: 2px auto 0 auto;
+    .content{
+       flex: 1;
+       background-color: #fff;
+    }
+    
   }
+  
 }

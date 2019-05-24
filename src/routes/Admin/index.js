@@ -34,14 +34,7 @@ import { connect } from 'dva'
     return (
       <div >
        {this.state.title}
-       <div onClick={()=>this.click(12)}  ref={()=>this.textDiv} >点击</div>
-       {/* <div onClick={()=>this.click(12)}  ref={this.textDiv(this,2)} >点击</div> */}
-
-       {/* <Son  
-       title={this.state.title} 
-       onChange={this.onChange}
-       refFn={this.textDiv}
-       ></Son> */}
+       <div onClick={()=>this.click(12)}  ref={()=>this.textDiv} >  点击HMR，即模块热替换，在修改代码后不需要刷新整 个页面，方便开发时的调试</div>
       </div>
     )
   }
