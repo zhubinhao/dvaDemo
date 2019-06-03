@@ -7,26 +7,21 @@ import styles from './index.scss';
 export default class index extends Component {
     constructor(props){
         super(props)
-        this.state={
-            pathname:''
-        }
-    }
-    componentDidMount(){
-        this.changeKeys(this.props.location.pathname)
-    }
-    changeKeys=(pathname)=>{
-        this.setState({
-            pathname
-        })
+        this.state={}
     }
     render() {
-        const {routes}=this.props
+        const {routes,location}=this.props
         return (
             <div className={styles.menu}>
                 <img src="" alt=""/>
                  <div>
                    {routes.map((res)=>(
-                       <Link key={res.path} to={res.path}  className={classnames(styles.item,{[styles.active]:res.path===this.state.pathname} )} onClick={()=>this.changeKeys(res.path)}>{res.name}</Link>
+                       <Link key={res.path} 
+                            to={res.path} 
+                            className={classnames(styles.item,{[styles.active]:res.path===location.pathname} )} 
+                            >
+                            {res.name}
+                        </Link>
                    ))}
                  </div>
                 <img src="" alt=""/>
